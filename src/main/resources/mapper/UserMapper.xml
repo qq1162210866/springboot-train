@@ -3,6 +3,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.psq.train.dao.UserMapper">
     <select id="getAllUser" resultType="TestUser">
-        SELECT id,name,password FROM test_user
+        SELECT id,name,password FROM user
     </select>
+    <update id="updateUser" parameterType="com.psq.train.mysql.TestUser">
+        UPDATE `user` SET `name`=#{name},`password`=#{password} WHERE id=#{id}
+    </update>
+    <insert id="insertUser" parameterType="com.psq.train.mysql.TestUser">
+        insert into user values (#{id},#{name},#{password})
+    </insert>
 </mapper>

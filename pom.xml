@@ -33,16 +33,16 @@
         </dependency>
 
         <!-- 数据库依赖 -->
-        <!--&lt;!&ndash; JDBC依赖 &ndash;&gt;
+        <!-- JDBC依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
-        &lt;!&ndash; MySQL依赖 &ndash;&gt;
+        <!-- MySQL依赖 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>-->
+        </dependency>
         <!-- druid连接池依赖 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -50,10 +50,10 @@
             <version>1.1.22</version>
         </dependency>
         <!-- postgresql依赖 -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.postgresql</groupId>-->
+<!--            <artifactId>postgresql</artifactId>-->
+<!--        </dependency>-->
         <!-- MyBatis依赖 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

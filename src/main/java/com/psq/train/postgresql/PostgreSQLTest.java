@@ -29,7 +29,7 @@ public class PostgreSQLTest {
      * @Author: Peng Shiquan
      * @Date: 2020/6/12
      */
-    @PostConstruct
+    //@PostConstruct
     public void selectAllUser() {
         List<TestUser> testUserList = userMapper.getAllUser();
         for (TestUser testUser : testUserList) {

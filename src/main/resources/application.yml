@@ -28,10 +28,10 @@ spring:
         min-idle: 0
   datasource:
     #PostgreSQL配置
-    url: jdbc:postgresql://111.229.157.173:5432/postgres
-    username: postgres
-    password: Ztjz@123
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
     #druid连接池配置
     type: com.alibaba.druid.pool.DruidDataSource
     # 初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时

@@ -1,16 +1,16 @@
 package com.psq.train;
 
+import com.psq.train.mysql.TransactionalTrain;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
+ * TrainApplication.java
  * Description: SpringBoot启动类
  *
- * @param null
- * @return
- * @Author: Peng Shiquan
- * @Date: 2020/5/28
+ * @author Peng Shiquan
+ * @date 2020/6/13
  */
 @SpringBootApplication
 @MapperScan("com.psq.train.dao")
