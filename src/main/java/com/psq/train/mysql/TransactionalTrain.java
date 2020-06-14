@@ -6,7 +6,6 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
@@ -41,7 +40,6 @@ public class TransactionalTrain extends SqlSessionDaoSupport {
             Integer saveResult = sqlSession.insert("com.psq.train.dao.UserMapper.insertUser", testUser);
             //重复插入，id相同一定回产生异常
             Integer saveResult2 = sqlSession.insert("com.psq.train.dao.UserMapper.insertUser", testUser);
-            sqlSession.commit();
         } catch (Exception e) {
             System.err.println("事务开始回滚");
             sqlSession.rollback();

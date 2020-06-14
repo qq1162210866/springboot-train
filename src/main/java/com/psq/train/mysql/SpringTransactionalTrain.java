@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.PostConstruct;
-
 /**
  * SpringTransactionalTrain.java
  * Description:  使用Spring来管理事务
@@ -30,7 +28,7 @@ public class SpringTransactionalTrain {
         try {
             Integer saveResult = userMapper.insertUser(testUser);
             System.err.println("插入成功");
-            //一定会包异常
+            //一定会报异常
             Integer saveResult2 = userMapper.insertUser(testUser);
         } catch (Exception e) {
             System.err.println(e);

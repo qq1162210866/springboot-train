@@ -3,6 +3,7 @@ package com.psq.train.controller;
 import com.psq.train.dao.UserMapper;
 import com.psq.train.mysql.SpringTransactionalTrain;
 import com.psq.train.mysql.TestUser;
+import com.psq.train.mysql.TransactionalTrain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,7 @@ public class TransactionalController {
 
     @Autowired
     private SpringTransactionalTrain springTransactionalTrain;
+
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String saveTestUser() {
