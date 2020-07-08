@@ -56,4 +56,3 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.psq.train.mysql
-
