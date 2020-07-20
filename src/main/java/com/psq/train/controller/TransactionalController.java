@@ -1,9 +1,7 @@
 package com.psq.train.controller;
 
-import com.psq.train.dao.UserMapper;
+import com.psq.train.config.MQTTConfig;
 import com.psq.train.mysql.SpringTransactionalTrain;
-import com.psq.train.mysql.TestUser;
-import com.psq.train.mysql.TransactionalTrain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,11 +19,20 @@ public class TransactionalController {
 
     @Autowired
     private SpringTransactionalTrain springTransactionalTrain;
+    @Autowired
+    private MQTTConfig.MyGateway myGateway;
 
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public String saveTestUser() {
         springTransactionalTrain.mybatisTransactionalTrain();
+        return "hello";
+    }
+
+    @RequestMapping(value = "/mqtt", method = RequestMethod.GET)
+    public String sendMQTTMsg() {
+        myGateway.sendToMqtt("testTopic1", "hello1");
+        myGateway.sendToMqtt("testTopic2", "hello2");
         return "hello";
     }
 }
