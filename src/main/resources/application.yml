@@ -12,8 +12,6 @@ spring:
     database: 0
     # Redis服务器连接端口
     port: 6379
-    # Redis服务器连接密码（默认为空）
-    password: 12345678
     # 连接超时时间（毫秒）
     timeout: 1000
     lettuce:
@@ -26,6 +24,7 @@ spring:
         max-idle: 10
         ## 连接池中的最小空闲连接
         min-idle: 0
+    password: qhlk@2017
   datasource:
     #PostgreSQL配置
     url: jdbc:mysql://127.0.0.1:3306/test
@@ -52,9 +51,12 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-  elasticsearch:
-    rest:
-      uris: 111.229.157.173:9200
+  activemq:
+    broker-url: tcp://192.168.1.183:61616
+    user: admin
+    password: admin
+  jms:
+    pub-sub-domain: true
 
 
 

@@ -43,7 +43,7 @@ public class MQTTConfig {
     @Bean
     public MessageProducer inbound() {
         MqttPahoMessageDrivenChannelAdapter adapter =
-                new MqttPahoMessageDrivenChannelAdapter("tcp://192.168.1.230:1883", "testClient1",
+                new MqttPahoMessageDrivenChannelAdapter("tcp://222.212.89.121:1883", "testClient1",
                         "testTopic1");
         adapter.setCompletionTimeout(5000);
         adapter.setConverter(new DefaultPahoMessageConverter());

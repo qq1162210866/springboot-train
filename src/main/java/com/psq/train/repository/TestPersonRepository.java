@@ -1,7 +1,6 @@
 package com.psq.train.repository;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-import org.springframework.stereotype.Component;
 
 /**
  * TestPersonRepository.java
@@ -10,7 +9,5 @@ import org.springframework.stereotype.Component;
  * @author Peng Shiquan
  * @date 2020/7/20
  */
-@Component
 public interface TestPersonRepository extends ElasticsearchRepository<TestPerson, String> {
-
 }
