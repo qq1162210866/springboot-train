@@ -72,6 +72,7 @@ public class QueueConsumerListener {
             ActiveMQMapMessage cameraListMessage = (ActiveMQMapMessage) message;
             try {
                 String xml = cameraListMessage.getContentMap().get("CamList").toString();
+                System.err.println("摄像头资源" + xml);
                 String id = cameraListMessage.getContentMap().get("ID").toString();
                 XStream xstream = new XStream();
                 XStream.setupDefaultSecurity(xstream);
